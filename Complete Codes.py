@@ -17,9 +17,8 @@ import pandas as pd
 from scipy import signal
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-import tensorflow as tf
 from tensorflow.keras import layers, models, optimizers, callbacks
-import matplotlib.pyplot as plt
+
 
 
 # Sample EEG file loading (replace with your dataset)
@@ -325,16 +324,16 @@ if __name__ == "__main__":
     pipeline = EpilepsyDetectionPipeline()
     
     # Example data preparation (replace with actual data loading)
-    # For demonstration, we'll create synthetic data
+    
     num_samples = 1000
     seq_length = 256
     num_channels = 23
     
-    # Synthetic EEG data (replace with actual data loading)
-    eeg_data = np.random.randn(num_samples, seq_length, num_channels)
-    labels = np.random.randint(0, 2, size=num_samples)  # Binary classification
-    adj_matrices = np.random.rand(num_samples, num_channels, num_channels)  # Random adjacency matrices
-    times = np.linspace(0, 1, num=seq_length).reshape(1, -1).repeat(num_samples, axis=0)
+    # EEG data (replace with actual data loading)
+    eeg_data = ......(num_samples, seq_length, num_channels) # place your data here
+    labels = .....(0, 2, size=num_samples)  # Binary classification
+    adj_matrices = .....(num_samples, num_channels, num_channels)  # place your adjacent matrices here
+    times = .....(0, 1, num=seq_length).reshape(1, -1).repeat(num_samples, axis=0)
     
     # Split data into train/val/test (70/15/15)
     split_idx1 = int(0.7 * num_samples)
